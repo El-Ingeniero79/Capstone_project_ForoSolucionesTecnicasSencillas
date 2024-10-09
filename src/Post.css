@@ -1,0 +1,211 @@
+.posts-container {
+  background-image: url('./images/imagen_ingenieria2.jpg'); 
+  background-size: cover;  
+  background-position: center; 
+  background-repeat: no-repeat; 
+  position: relative;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+
+.posts-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7); 
+  z-index: -1; 
+}
+
+
+.posts-content {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto; 
+}
+
+/* Estilo para la lista de posts */
+.post-list {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px;
+  width: 70%; 
+  max-width: 800px;
+  transition: width 0.3s ease; 
+}
+.sort-options {
+  color:rgba(69, 160, 73, 1);
+  font-size: 15px;
+}
+
+.sort-options select {
+  color:rgba(69, 160, 73, 1);
+  border-radius: 5px;
+  border: 2px 2px 2px 2px;
+  font-size: 20px;
+  border-width: 3px
+}
+/* Barra de búsqueda */
+.search-bar {
+  width: 25%; 
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+  position: sticky;
+  top: 20px; 
+  align-self: flex-start;
+  background-color: transparent; 
+  box-shadow: -31px 16px 24px -3px rgba(69, 160, 73, 1); 
+  border-radius: 5px; 
+  z-index: 2;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(69, 160, 73, 1); 
+}
+
+/* Estilos para cada post */
+.post-container {
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.restricted-post {
+  background-color: #f0f0f0;
+  color: #999;
+  border: 1px solid #ccc;
+}
+
+
+.post {
+  margin-bottom: 40px;
+}
+
+
+.boton_borrar {
+  background-color: red;
+  color: white; 
+  border: none; 
+  padding: 13px; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+/* Estilo para la ventana de últimos posts */
+.latest-posts-container {
+  position: absolute;
+  align-items: center;
+  top: 100px;
+  right: 20px;
+  width: 400px;
+}
+
+.chat-window {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  height: 400px;
+  overflow-y: scroll;
+  box-shadow: -31px 16px 24px -3px rgba(69, 160, 73, 1);
+}
+
+.chat-message {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.chat-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.chat-content {
+  font-size: 14px;
+  color: #555;
+}
+
+.view-more {
+  text-align: right;
+  margin-top: 10px;
+}
+
+
+.view-more a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .posts-content {
+    flex-direction: column;
+  }
+
+  
+  .search-bar {
+    width: 25%; 
+    position: fixed; 
+    top: 0px; 
+    
+    right: 50px;
+    padding: 0px 0px;
+    z-index: 10; 
+    box-shadow: -31px 16px 24px -3px rgba(69, 160, 73, 1);
+    background-color: white;
+  }
+
+  .post-list {
+    width: 100%; 
+    padding-top: 100px;
+  }
+
+  .post-container {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .post-content {
+    font-size: 14px;
+  }
+}
+
+

@@ -1,0 +1,122 @@
+.postform-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: calc(100vh-60px);
+  background-image: url('./images/imagen_ingenieria3_pensando.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 60px;
+  
+}
+
+/* Capa semitransparente encima de la imagen sin desenfoque */
+.postform-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 0; 
+}
+
+
+/* Estilo  título y tarjeta del formulario */
+.form-title {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 30px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 400px; 
+  max-width: 90%; 
+  text-align: center; 
+  margin-bottom: 20px; 
+  z-index: 1; 
+}
+
+/* Estilo del formulario */
+.postform-card {
+  position: relative;
+  z-index: 1; 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+
+/* Estilo de los campos de entrada */
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.textarea {
+  height: 150px; 
+}
+
+/* Estilo para los botones */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Alineación de la opción restringida y el botón */
+.restricted-label {
+  margin: 20px 0; 
+  text-align: center; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .postform-card {
+    width: 90%; 
+    padding: 20px; 
+  }
+
+  .form-control {
+    font-size: 14px; 
+    padding: 8px; 
+  }
+
+  .textarea {
+    height: 120px; 
+  }
+
+  .btn-primary {
+    padding: 8px 16px; 
+  }
+
+  
+  .restricted-label {
+    margin: 15px 0; 
+  }
+}
