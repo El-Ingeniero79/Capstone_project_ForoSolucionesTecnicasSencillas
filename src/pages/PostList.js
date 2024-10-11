@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../.api';
 import { useAuth } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import '../Post.css';
@@ -45,7 +45,7 @@ function PostList({ searchTerm }) {
               </Link>
               <p><strong>Autor:</strong> {post.author?.nick || 'Autor desconocido'}</p>
               <p>{post.restricted && !user ? 'Este mensaje está restringido.' : (post.content ? post.content.substring(0, 50) + '...' : 'Contenido no disponible')}</p>
-              <p><strong>Fecha de creación:</strong> {new Date(post.created_at).toLocaleDateString()}</p> {/* Mostrar la fecha */}
+              <p><strong>Fecha de creación:</strong> {new Date(post.created_at).toLocaleDateString()}</p> 
               
             </div>
           ))

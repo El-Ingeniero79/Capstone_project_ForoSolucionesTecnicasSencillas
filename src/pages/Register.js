@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios from '../.api';
 import { useNavigate } from 'react-router-dom';
 import '../Form.css';
 
@@ -20,7 +20,7 @@ function Register() {
     try {
       setError('');
 
-      const response = await axios.post('http://localhost:5000/register', {
+      const response = await axios.post('/register', {
         email,
         password,
         nick,

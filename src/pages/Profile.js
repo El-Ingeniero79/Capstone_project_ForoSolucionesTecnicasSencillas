@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../.api';
 import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
 import '../Post.css';
@@ -13,7 +13,7 @@ function Profile() {
     const fetchProfileData = async () => {
       try {
         // Obtenemos los posts del usuario autenticado
-        const postResponse = await axios.get('http://localhost:5000/posts', {
+        const postResponse = await axios.get('/posts', {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
 
@@ -33,7 +33,7 @@ function Profile() {
   // Función para eliminar un post
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:5000/posts/${postId}`, {
+      await axios.delete(`/posts/${postId}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       // Actualizamos la lista de posts después de eliminar
