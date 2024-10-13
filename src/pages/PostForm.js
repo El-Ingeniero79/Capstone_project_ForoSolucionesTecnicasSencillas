@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../.api';
+import Swal from 'sweetalert2';
 import { useAuth } from '../context/AuthContext'; 
 import { useNavigate } from 'react-router-dom'; 
 import '../CreateForm.css';
@@ -26,10 +27,15 @@ function PostForm() {
           Authorization: `Bearer ${token}` 
         }
       });
-      alert('Post creado con éxito');
+      Swal.fire({
+        title: 'Lo has hecho genial',
+        text: '¡¡¡¡¡has creado tu post con éxito!!!!!',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
       
-      // Redirigir a la página de inicio después de la creación correcta del post
-      navigate('/'); 
+      // Redirigir a la página de posts después de la creación correcta del post
+      navigate('/posts'); 
       
       setTitle('');
       setContent('');
