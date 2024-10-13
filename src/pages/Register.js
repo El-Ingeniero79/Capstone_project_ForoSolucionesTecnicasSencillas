@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from '../.api';
+import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import '../Form.css';
 
@@ -26,7 +27,13 @@ function Register() {
         nick,
       });
 
-      alert('Registro exitoso');
+      Swal.fire({
+        title: '¡YA ERES UNO DE LOS NUESTROS!',
+        text: '¡¡¡¡¡te has registrado con éxito!!!!!',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
+
       localStorage.setItem('token', response.data.token); 
       navigate('/login');
     } catch (error) {
