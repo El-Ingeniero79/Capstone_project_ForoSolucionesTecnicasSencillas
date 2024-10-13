@@ -26,9 +26,9 @@ function Register() {
         nick,
       });
 
-      //si es registro exitoso pasa a login directamente
+      alert('Registro exitoso');
       localStorage.setItem('token', response.data.token); 
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       // Mostrar errores específicos del registro
       if (error.response && error.response.data) {
