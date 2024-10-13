@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Swal from 'sweetalert2';
 import '../Post.css';
 import '../PostDetail.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -35,7 +36,14 @@ function PostDetail() {
           Authorization: `Bearer ${token}`
         }
       });
-      navigate('/');
+
+      Swal.fire({
+        title: '¡mensaje borrado!',
+        text: 'Has borrado correctamente tu mensaje',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+      });
+      navigate('/posts');
     } catch (error) {
       console.error('Error eliminando el post:', error);
     }
