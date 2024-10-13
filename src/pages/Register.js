@@ -26,9 +26,9 @@ function Register() {
         nick,
       });
 
-      alert('Registro exitoso');
+      setError('Registro exitoso');
       localStorage.setItem('token', response.data.token); 
-      navigate('/');
+      navigate('/login');
     } catch (error) {
       // Mostrar errores específicos del registro
       if (error.response && error.response.data) {
