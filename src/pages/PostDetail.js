@@ -56,15 +56,15 @@ function PostDetail() {
           Authorization: `Bearer ${token}`
         }
       });
-      setIsEditingPost(false);  // Salir del modo de edición tras guardar
+      setIsEditingPost(false); 
     } catch (error) {
       console.error('Error editando el post:', error);
     }
   };
 
   const handleCancelEdit = () => {
-    setPost({ ...post, content: originalContent });  // Restaurar el contenido original
-    setIsEditingPost(false);  // Salir del modo de edición
+    setPost({ ...post, content: originalContent }); 
+    setIsEditingPost(false); 
   };
 
   const handleGoBack = () => {

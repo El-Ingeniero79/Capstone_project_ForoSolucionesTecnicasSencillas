@@ -1,6 +1,6 @@
 # Foro de Soluciones Tecnicas Sencillas
 
-este foro esta creado para que personas profesionales o expertos en materias puedan explicar de forma sencilla tecnicas o teorias complejas.
+Este foro esta creado para que personas profesionales o expertos en materias puedan explicar de forma sencilla tecnicas o teorias complejas y que todo el mundo las pueda entender.
 
 El foro consta de varias secciones o pestañas:
 
@@ -13,14 +13,15 @@ El foro consta de varias secciones o pestañas:
 La ultima pestaña publica es para registrarte, **register**, en ella te podras registrar con un email, una contraseña de mas de 8 caracteres y un nick de mas de 3 caracteres (solo numeros y/o letras).
 
 Una vez que te registras y haces log In, en la barra de navegacion te saldran nuevas opciones:
-    - **profile**: en esta pestaña podras ver con que email estas registrado, que nick tienes y un resumen de todos los posts que has escrito. Si pinchas en cada uno podras ver el contenido completo y editarlos o borrarlos.
 
-     -**Create Post** , aqui podras crear el post, debes introducir un titulo y luego todo el contenido que consideres interesante, ademas podras declarar el post publico o restringido. si lo declaras restringido solo personas registradas y logueadas podras leer su contenido.
+ **profile**: en esta pestaña podras ver con que email estas registrado, que nick tienes y un resumen de todos los posts que has escrito. Si pinchas en cada uno podras ver el contenido completo y editarlos o borrarlos.
 
-    - **logout** cerrar sesion.
+**Create Post** , aqui podras crear el post, debes introducir un titulo y luego todo el contenido que consideres interesante, ademas podras declarar el post publico o restringido. si lo declaras restringido solo personas registradas y logueadas podras leer su contenido.
 
-    Espero que disfrutes y aprendas mucho en este foro, en el corto plazo añadire mas opciones y funcionalidades para hacerlo mas atractivo.
+**logout** cerrar sesion.
 
-    Un saludo!!!
+Espero que disfrutes y aprendas mucho en este foro, en el corto plazo añadire mas opciones y funcionalidades para hacerlo mas atractivo.
+
+Un saludo!!!
     
 

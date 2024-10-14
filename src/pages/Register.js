@@ -37,9 +37,9 @@ function Register() {
       localStorage.setItem('token', response.data.token); 
       navigate('/login');
     } catch (error) {
-      // Mostrar errores específicos del registro
+      
       if (error.response && error.response.data) {
-        // Usa directamente el mensaje de error de la respuesta
+        
         setError(error.response.data.error || 'Error en el registro.');
       } else {
         setError('Error en el registro.');
